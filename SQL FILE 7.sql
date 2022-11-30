@@ -1,0 +1,2 @@
+with tl as(select pro_id, min(supp_price) price from supplier_pricing)
+select distinct category.cat_id, category.cat_name, product.pro_name, t1.price from t1, product join category on product.cat_id = category.cat_id
